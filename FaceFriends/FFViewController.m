@@ -98,8 +98,8 @@
         NSData * imageData = UIImageJPEGRepresentation(staticImage.image, 90);
         NSURL * url = [NSURL URLWithString:@"http://api.face.com/faces/detect.json"];
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-        [request addPostValue:@"371ff8eb9bed2e8fda3a0519adedcfda" forKey:@"api_key"];
-        [request addPostValue:@"3cc68cae2105aaa134786e9359c19b63" forKey:@"api_secret"];
+        [request addPostValue:@"YOUR_API_KEY" forKey:@"api_key"];
+        [request addPostValue:@"YOU_API_SECRET" forKey:@"api_secret"];
         [request addPostValue:@"all" forKey:@"attributes"];
         [request addData:imageData withFileName:@"image.jpg" andContentType:@"image/jpeg"
                   forKey:@"filename"];
